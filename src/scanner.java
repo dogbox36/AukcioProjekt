@@ -1,16 +1,19 @@
-import java.io.*;
-import java.util.Scanner;
-public class scanner
-{
-    public static void main(String[] args) throws Exception
-    {
-//parsing a CSV file into Scanner class constructor
-        Scanner sc = new Scanner(new File("C:\\Users\\domin\\IdeaProjects\\AukcioProjekt\\src\\festmenyek.csv"));
-        sc.useDelimiter(",");   //sets the delimiter pattern
-        while (sc.hasNext())  //returns a boolean value
-        {
-            System.out.print(sc.next());  //find and returns the next complete token from this scanner
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.*;
+
+public class scanner {
+    public static void main(String[] args) throws IOException {
+        var lines = Files.readAllLines(Paths.get("C:\\Users\\domin\\IdeaProjects\\AukcioProjekt\\festmenyek.csv"));
+        var paintings = new LinkedList<Festmeny>();
+
+        for (var line: lines) {
+            var painting = new Festmeny(line);
+            paintings.add(painting);
         }
-        sc.close();  //closes the scanner
+
+        System.out.println(paintings);
     }
 }
