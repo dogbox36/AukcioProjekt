@@ -16,4 +16,5 @@ public class scanner {
 
         System.out.println(paintings);
     }
+    //Eddig jutottam a gyakorlat alatt
 }

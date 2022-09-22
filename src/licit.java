@@ -16,4 +16,5 @@ public class licit {
     public int promptInt(String promptStr) {
         return Integer.parseInt(prompt(promptStr));
     }
+    //Eddig jutottam a gyakorlat alatt
 }

@@ -82,4 +82,5 @@ public class Festmeny {
                 legutolsoLicitIdeje == null ? "meg nem volt licit" : legutolsoLicitIdeje.toString(),
                 licitekSzama);
     }
+    //Eddig jutottam a gyakorlat alatt
 }
